@@ -51,7 +51,7 @@ public class FornecedoresController : MainController
     }
 
     [HttpPut("{id:guid}")]
-    public async Task<ActionResult<FornecedorViewModel>> Adicionar(Guid id, FornecedorViewModel fornecedorViewModel)
+    public async Task<ActionResult<FornecedorViewModel>> Atualizar(Guid id, FornecedorViewModel fornecedorViewModel)
     {
         if (id != fornecedorViewModel.Id) return BadRequest();
         if (!ModelState.IsValid) return BadRequest();
